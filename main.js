@@ -71,14 +71,15 @@ function draw(dt) {
             delta.innerHTML = `Δ = ${round(Δ)}`
             break
         case "factorisée":
-            if(x1 && x2) {
+            if(x1 != NaN && x2 != NaN) {
                 b  = input_b.value = round(-a*(x1+x2))
                 c  = input_c.value = round(a*x1*x2)
                 Δ  = b*b - 4*a*c
                 VΔ = Math.sqrt(Δ)
                 α  = input_α.value = round(-(b/(2*a)))
                 β  = input_β.value = round(-(Δ/(4*a)))
-                fonction.innerHTML = `f(x) = ${round(a)}(x - ${round(x1)})(x - ${round(x2)})}`
+                if(x1 == x2) fonction.innerHTML = `f(x) = ${round(a)}(x - ${round(x1)})²`
+                else fonction.innerHTML = `f(x) = ${round(a)}(x - ${round(x1)})(x - ${round(x2)})`
                 delta.innerHTML = `Δ = ${round(Δ)}`
             }
             break
