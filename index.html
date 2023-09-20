@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polynome du 2nd degré</title>
+</head>
+<body>
+    <canvas style="position: absolute;"></canvas>
+    <div style="position: absolute;">
+        <span id="fonction"></span>
+        <br>
+        <span id="delta"></span>
+        <br>
+        <button onclick="changeTab('développée')">forme développée</button>
+        <br>
+        <button onclick="changeTab('canonique')" >forme canonique </button>
+        <br>
+        <button onclick="changeTab('factorisée')">forme factorisée</button>
+        <br>
+        <label for="a"><code>a = </code></label><input type="number" min="-10" max="10" step="0.1" name="a" id="a" value="1"><br>
+        <div id="développée">
+            <label for="b"><code>b = </code></label><input type="number" min="-10" max="10" step="0.1" name="b" id="b" value="0"><br>
+            <label for="c"><code>c = </code></label><input type="number" min="-10" max="10" step="0.1" name="c" id="c" value="0"><br>
+        </div>
+        <div id="canonique" hidden>
+            <label for="α"><code>α = </code></label><input type="number" min="-10" max="10" step="0.1" name="α" id="α" value="0"><br>
+            <label for="β"><code>β = </code></label><input type="number" min="-10" max="10" step="0.1" name="β" id="β" value="0"><br>
+        </div>
+        <div id="factorisée" hidden>
+            <label for="x1"><code>x₁= </code></label><input type="number" min="-10" max="10" step="0.1" name="x1" id="x1" value="0"><br>
+            <label for="x2"><code>x₂= </code></label><input type="number" min="-10" max="10" step="0.1" name="x2" id="x2" value="0"><br>
+        </div>
+        <label for="zoom">Zoom : </label><input type="range" min="10" max="101" step="1" name="zoom" id="zoom" value="20"><br>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
